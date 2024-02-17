@@ -10,11 +10,11 @@
 <body>
     <script>
         function inject() {
-            console.log("inject v0.0.2");
+            console.log("inject v0.0.3");
             
             var frame = document.getElementById("trimps");
             var myscript = document.createElement('script');
-            console.log("frame", frame, frame.contentDocument);
+            console.log("frame", frame, frame.contentDocument, frame.contentWindow.document);
             myscript.type = 'text/javascript';
             myscript.src = 'https://Zorn192.github.io/AutoTrimps/AutoTrimps2.js';
             myscript.setAttribute('crossorigin',"anonymous");
