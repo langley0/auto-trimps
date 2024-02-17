@@ -11,6 +11,8 @@
     <script>
         function inject() {
             console.log("inject");
+            console.log(window.frames);
+            
             var iFrameHead = window.frames["trimps"].document.getElementsByTagName("head")[0];
             var myscript = document.createElement('script');
             console.log(iFrameHead);
