@@ -12,7 +12,7 @@
         function inject() {
             console.log("inject v0.0.7");
             
-            var frame = document.getElementById("trimps")[0];
+            var frame = document.getElementById("trimps");
             var myscript = document.createElement('script');
             console.log(frame);
             console.log(frame.contentDocument?"good":"bad");
@@ -28,6 +28,7 @@
     <iframe
         id="trimps"
         src="https://trimps.github.io"
+        sandbox="allow-scripts allow-same-origin allow-popups"
         onload="inject()"
     />
 </body>
