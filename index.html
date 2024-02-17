@@ -10,13 +10,12 @@
 <body>
     <script>
         function inject() {
-            console.log("inject v0.0.5");
+            console.log("inject v0.0.6");
             
             var frame = document.getElementById("trimps");
             var myscript = document.createElement('script');
             console.log(frame);
-            console.log(frame.contentDocument);
-            console.log(frame.contentWindow);
+            console.log(frame.contentDocument?"good":"bad");
            
             myscript.type = 'text/javascript';
             myscript.src = 'https://Zorn192.github.io/AutoTrimps/AutoTrimps2.js';
