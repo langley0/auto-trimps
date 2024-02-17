@@ -11,15 +11,14 @@
     <script>
         function inject() {
             console.log("inject");
-            console.log(object.keys(window.frames)[0]);
             
-            var iFrameHead = window.frames["trimps"].document.getElementsByTagName("head")[0];
+            var frame = document.getElementById("trimps");
             var myscript = document.createElement('script');
-            console.log(iFrameHead);
+            console.log(frame.contentDocument);
             myscript.type = 'text/javascript';
             myscript.src = 'https://Zorn192.github.io/AutoTrimps/AutoTrimps2.js';
             myscript.setAttribute('crossorigin',"anonymous");
-            iFrameHead.appendChild(myscript);
+            frame.contentDocument.body.appendChild(myscript);
         }
     </script>
     <iframe
