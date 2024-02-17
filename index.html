@@ -10,16 +10,20 @@
 <body>
     <script>
         function inject() {
-            console.log("inject v0.0.4");
+            console.log("inject v0.0.5");
             
             var frame = document.getElementById("trimps");
             var myscript = document.createElement('script');
-            console.log(object.keys(frame));
-            console.log("frame", frame, !!frame.contentWindow);
+            console.log(frame);
+            console.log(frame.contentDocument);
+            console.log(frame.contentWindow);
+           
             myscript.type = 'text/javascript';
             myscript.src = 'https://Zorn192.github.io/AutoTrimps/AutoTrimps2.js';
             myscript.setAttribute('crossorigin',"anonymous");
             frame.contentDocument.body.appendChild(myscript);
+
+            console.log("done");
         }
     </script>
     <iframe
