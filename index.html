@@ -10,8 +10,10 @@
 <body>
     <script>
         function inject() {
+            console.log("inject");
             var iFrameHead = window.frames["trimps"].document.getElementsByTagName("head")[0];
             var myscript = document.createElement('script');
+            console.log(iFrameHead);
             myscript.type = 'text/javascript';
             myscript.src = 'https://Zorn192.github.io/AutoTrimps/AutoTrimps2.js';
             myscript.setAttribute('crossorigin',"anonymous");
