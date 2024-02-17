@@ -8,5 +8,19 @@
 </style>
 
 <body>
-  <iframe src="https://trimps.github.io" />
+    <script>
+        function inject() {
+            var iFrameHead = window.frames["trimps"].document.getElementsByTagName("head")[0];
+            var myscript = document.createElement('script');
+            myscript.type = 'text/javascript';
+            myscript.src = 'https://Zorn192.github.io/AutoTrimps/AutoTrimps2.js';
+            myscript.setAttribute('crossorigin',"anonymous");
+            iFrameHead.appendChild(myscript);
+        }
+    </script>
+    <iframe
+        id="trimps"
+        src="https://trimps.github.io"
+        onload="inject()"
+    />
 </body>
